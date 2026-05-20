@@ -1,11 +1,197 @@
 <!DOCTYPE html>
-<html>
+<html lang="pl">
 <head>
-  <title>Moja strona</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Kurs Hulajnóg</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family:Arial;
+    background:#050505;
+    color:white;
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 60px;
+    background:#0a0a0a;
+    position:sticky;
+    top:0;
+}
+
+.logo{
+    color:#39ff14;
+    font-size:28px;
+    font-weight:bold;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:30px;
+}
+
+.hero{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:80px;
+}
+
+.left{
+    width:50%;
+}
+
+.left h1{
+    font-size:70px;
+    margin-bottom:20px;
+}
+
+.green{
+    color:#39ff14;
+}
+
+.left p{
+    font-size:22px;
+    color:#bdbdbd;
+    line-height:1.6;
+}
+
+.buttons{
+    margin-top:40px;
+}
+
+.btn{
+    padding:18px 35px;
+    border:none;
+    border-radius:12px;
+    font-size:18px;
+    cursor:pointer;
+    margin-right:20px;
+}
+
+.buy{
+    background:#39ff14;
+    color:black;
+    font-weight:bold;
+}
+
+.more{
+    background:transparent;
+    border:1px solid #39ff14;
+    color:white;
+}
+
+.right img{
+    width:600px;
+    border-radius:25px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+    padding:60px;
+}
+
+.card{
+    background:#111;
+    padding:30px;
+    border-radius:20px;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    border:1px solid #39ff14;
+}
+
+.card h3{
+    color:#39ff14;
+}
+
+footer{
+    text-align:center;
+    padding:40px;
+    color:gray;
+}
+
+</style>
 </head>
 
-<body style="font-family:Arial; text-align:center; margin-top:50px;">
-  <h1>Cześć 👋</h1>
-  <p>To moja pierwsza darmowa strona internetowa!</p>
+<body>
+
+<nav>
+    <div class="logo">eScooter</div>
+
+    <div>
+        <a href="">Start</a>
+        <a href="">Kurs</a>
+        <a href="">Opinie</a>
+        <a href="">Kontakt</a>
+    </div>
+</nav>
+
+<section class="hero">
+
+<div class="left">
+
+<h1>
+Kurs <span class="green">Hulajnóg</span><br>
+Elektrycznych
+</h1>
+
+<p>
+Naucz się wszystkiego o hulajnogach elektrycznych —
+serwis, tuning, wybór i bezpieczeństwo.
+</p>
+
+<div class="buttons">
+<button class="btn buy">Kup kurs</button>
+
+<button class="btn more">
+Dowiedz się więcej
+</button>
+</div>
+
+</div>
+
+<div class="right">
+
+<img src="https://images.unsplash.com/photo-1608032364895-0da67af36cd2?q=80&w=1200">
+
+</div>
+
+</section>
+
+<section class="cards">
+
+<div class="card">
+<h3>Naprawa</h3>
+<p>Dowiedz się jak serwisować hulajnogi krok po kroku.</p>
+</div>
+
+<div class="card">
+<h3>Tuning</h3>
+<p>Zwiększ osiągi i poznaj najlepsze modyfikacje.</p>
+</div>
+
+<div class="card">
+<h3>Bezpieczeństwo</h3>
+<p>Naucz się zasad bezpiecznej jazdy i prawa.</p>
+</div>
+
+</section>
+
+<footer>
+© 2025 eScooter Academy
+</footer>
+
 </body>
 </html>
