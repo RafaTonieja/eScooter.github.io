@@ -22,46 +22,75 @@ font-family:Arial, sans-serif;
 overflow-x:hidden;
 }
 
-/* GŁÓWNA SEKCJA */
+/* MENU */
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:25px 60px;
+position:absolute;
+top:0;
+width:100%;
+z-index:1000;
+}
+
+.logo{
+font-size:32px;
+font-weight:bold;
+color:#a855f7;
+letter-spacing:2px;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:30px;
+}
+
+nav ul li a{
+text-decoration:none;
+color:white;
+font-size:18px;
+transition:0.3s;
+}
+
+nav ul li a:hover{
+color:#a855f7;
+}
+
+/* HERO */
 
 .hero{
 height:100vh;
 display:flex;
-flex-direction:column;
-justify-content:center;
+justify-content:space-between;
 align-items:center;
-text-align:center;
-padding:40px;
+padding:80px;
 }
 
-/* ZDJĘCIE */
+/* LEWA STRONA */
 
-.hero img{
-width:750px;
-max-width:100%;
-filter:drop-shadow(0 0 50px rgba(255,255,255,0.15));
-transition:0.3s;
+.left{
+width:50%;
 }
 
-.hero img:hover{
-transform:scale(1.02);
-}
-
-/* NAPIS */
-
-.hero h1{
+.left h1{
 font-size:85px;
-margin-top:30px;
+line-height:1.1;
+margin-bottom:25px;
 font-weight:900;
-letter-spacing:3px;
 }
 
-.hero p{
-margin-top:25px;
+.purple{
+color:#a855f7;
+}
+
+.left p{
 font-size:24px;
 color:#cfcfcf;
-max-width:850px;
 line-height:1.8;
+max-width:700px;
 }
 
 /* PRZYCISKI */
@@ -71,50 +100,79 @@ margin-top:50px;
 display:flex;
 gap:20px;
 flex-wrap:wrap;
-justify-content:center;
 }
 
 .btn{
 padding:18px 40px;
-border-radius:14px;
+border-radius:15px;
 text-decoration:none;
 font-size:20px;
 font-weight:bold;
 transition:0.3s;
 }
 
-.white{
-background:white;
-color:black;
+.buy{
+background:#a855f7;
+color:white;
 }
 
-.black{
-border:1px solid white;
+.more{
+border:1px solid #a855f7;
 color:white;
 }
 
 .btn:hover{
 transform:scale(1.05);
+box-shadow:0 0 30px rgba(168,85,247,0.4);
+}
+
+/* PRAWA STRONA */
+
+.right img{
+width:700px;
+max-width:100%;
+filter:drop-shadow(0 0 50px rgba(168,85,247,0.25));
+transition:0.3s;
+}
+
+.right img:hover{
+transform:scale(1.02);
 }
 
 /* TELEFON */
 
-@media(max-width:900px){
+@media(max-width:1000px){
 
-.hero h1{
-font-size:50px;
+.hero{
+flex-direction:column;
+text-align:center;
+padding-top:140px;
 }
 
-.hero p{
-font-size:20px;
-}
-
-.hero img{
+.left{
 width:100%;
 }
 
+.left h1{
+font-size:55px;
+}
+
+.left p{
+font-size:20px;
+}
+
 .buttons{
+justify-content:center;
+}
+
+.right img{
+margin-top:60px;
+width:100%;
+}
+
+nav{
 flex-direction:column;
+gap:20px;
 }
 
 }
@@ -124,28 +182,55 @@ flex-direction:column;
 
 <body>
 
+<!-- MENU -->
+
+<nav>
+
+<div class="logo">
+PREMIUM
+</div>
+
+<ul>
+<li><a href="">Start</a></li>
+<li><a href="kursy.html">Kursy</a></li>
+<li><a href="">Kontakt</a></li>
+</ul>
+
+</nav>
+
+<!-- HERO -->
+
 <section class="hero">
 
-<img src="Kukirin-G4-elektricni-skiro-promo4.webp">
+<div class="left">
 
 <h1>
-PREMIUM SCOOTER
+Premium <span class="purple">Scooter</span>
 </h1>
 
 <p>
 Nowoczesne kursy jazdy, bezpieczeństwa
-i obsługi hulajnóg elektrycznych.
+i obsługi hulajnóg elektrycznych
+w premium stylu.
 </p>
 
 <div class="buttons">
 
-<a href="kursy.html" class="btn white">
+<a href="kursy.html" class="btn buy">
 Kup kurs
 </a>
 
-<a href="kursy.html" class="btn black">
+<a href="kursy.html" class="btn more">
 Kursy
 </a>
+
+</div>
+
+</div>
+
+<div class="right">
+
+<img src="Kukirin-G4-elektricni-skiro-promo4.webp">
 
 </div>
 
