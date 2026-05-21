@@ -5,203 +5,76 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>eScooter Academy</title>
+<title>Kursy Hulajnóg</title>
 
 <style>
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
 body{
-    font-family:Arial, sans-serif;
     background:#050505;
     color:white;
+    font-family:Arial;
+    margin:0;
 }
 
-/* MENU */
-
-nav{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:25px 60px;
-    background:#0a0a0a;
-    position:sticky;
-    top:0;
-    z-index:1000;
-}
-
-.logo{
-    font-size:30px;
-    font-weight:bold;
-    color:#39ff14;
-}
-
-nav ul{
-    display:flex;
-    list-style:none;
-}
-
-nav ul li{
-    margin-left:30px;
-}
-
-nav ul li a{
-    text-decoration:none;
-    color:white;
-    transition:0.3s;
-}
-
-nav ul li a:hover{
-    color:#39ff14;
-}
-
-/* HERO */
-
-.hero{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:80px;
-    min-height:90vh;
-}
-
-.left{
-    width:50%;
-}
-
-.left h1{
-    font-size:75px;
-    line-height:1.1;
-    margin-bottom:25px;
+h1{
+    text-align:center;
+    margin-top:50px;
+    font-size:60px;
 }
 
 .green{
     color:#39ff14;
 }
 
-.left p{
-    color:#bdbdbd;
-    font-size:22px;
-    line-height:1.7;
-}
-
-.buttons{
-    margin-top:40px;
-}
-
-.btn{
-    padding:18px 35px;
-    border:none;
-    border-radius:14px;
-    font-size:18px;
-    cursor:pointer;
-    transition:0.3s;
-    margin-right:20px;
-}
-
-.buy{
-    background:#39ff14;
-    color:black;
-    font-weight:bold;
-}
-
-.buy:hover{
-    transform:scale(1.05);
-}
-
-.more{
-    background:transparent;
-    border:2px solid #39ff14;
-    color:white;
-}
-
-.more:hover{
-    background:#39ff14;
-    color:black;
-}
-
-.right img{
-    width:650px;
-    border-radius:25px;
-    box-shadow:0 0 40px rgba(57,255,20,0.3);
-}
-
-/* KARTY */
-
-.cards{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:30px;
-    padding:60px;
+.container{
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    margin-top:80px;
+    flex-wrap:wrap;
 }
 
 .card{
     background:#111;
-    padding:35px;
-    border-radius:20px;
+    width:400px;
+    border-radius:25px;
+    overflow:hidden;
     transition:0.3s;
+    text-align:center;
+    padding-bottom:30px;
 }
 
 .card:hover{
     transform:translateY(-10px);
-    border:1px solid #39ff14;
-    box-shadow:0 0 20px rgba(57,255,20,0.2);
+    box-shadow:0 0 30px rgba(57,255,20,0.3);
 }
 
-.card h3{
+.card img{
+    width:100%;
+    height:300px;
+    object-fit:cover;
+}
+
+.card h2{
+    margin-top:30px;
     color:#39ff14;
-    margin-bottom:15px;
-    font-size:28px;
 }
 
 .card p{
     color:#cfcfcf;
+    padding:20px;
     line-height:1.6;
 }
 
-/* FOOTER */
-
-footer{
-    text-align:center;
-    padding:40px;
-    color:gray;
-    border-top:1px solid #111;
-}
-
-/* TELEFON */
-
-@media(max-width:1000px){
-
-.hero{
-    flex-direction:column;
-    text-align:center;
-}
-
-.left{
-    width:100%;
-}
-
-.left h1{
-    font-size:50px;
-}
-
-.right img{
-    width:100%;
-    margin-top:50px;
-}
-
-nav{
-    flex-direction:column;
-}
-
-nav ul{
+.card a{
+    display:inline-block;
     margin-top:20px;
-}
-
+    padding:15px 30px;
+    background:#39ff14;
+    color:black;
+    text-decoration:none;
+    border-radius:15px;
+    font-weight:bold;
 }
 
 </style>
@@ -209,97 +82,47 @@ nav ul{
 
 <body>
 
-<!-- MENU -->
-
-<nav>
-
-<div class="logo">
-eScooter
-</div>
-
-<ul>
-<li><a href="">Start</a></li>
-<li><a href="">Kurs</a></li>
-<li><a href="">Opinie</a></li>
-<li><a href="">Kontakt</a></li>
-</ul>
-
-</nav>
-
-<!-- GŁÓWNA SEKCJA -->
-
-<section class="hero">
-
-<div class="left">
-
 <h1>
-Kurs <span class="green">Hulajnóg</span><br>
-Elektrycznych
+Nasze <span class="green">Kursy</span>
 </h1>
 
-<p>
-Poznaj świat hulajnóg elektrycznych.
-Naucz się serwisu, tuningu, bezpieczeństwa
-i wyboru najlepszych modeli.
-</p>
-
-<div class="buttons">
-
-<button class="btn buy">
-Kup kurs
-</button>
-
-<button class="btn more">
-Dowiedz się więcej
-</button>
-
-</div>
-
-</div>
-
-<div class="right">
-
-<img src="Kukirin-G4-elektricni-skiro-promo4.webp"
-style="
-width:700px;
-filter:drop-shadow(0 0 40px rgba(57,255,20,0.4));
-">
-
-</div>
-
-</section>
-
-<!-- KARTY -->
-
-<section class="cards">
+<div class="container">
 
 <div class="card">
-<h3>Naprawa</h3>
+
+<img src="Kukirin-G4-elektricni-skiro-promo4.webp">
+
+<h2>Kurs KuKirin G4</h2>
+
 <p>
-Dowiedz się jak profesjonalnie naprawiać hulajnogi elektryczne.
+Poznaj wszystko o KuKirin G4.
+Serwis, tuning i osiągi.
 </p>
+
+<a href="kurs1.html">
+Zobacz kurs
+</a>
+
 </div>
 
 <div class="card">
-<h3>Tuning</h3>
+
+<img src="Kukirin-G4-elektricni-skiro-promo4.webp">
+
+<h2>Serwis i Tuning</h2>
+
 <p>
-Poznaj najlepsze modyfikacje zwiększające osiągi.
+Zaawansowany kurs naprawy
+i tuningu hulajnóg elektrycznych.
 </p>
+
+<a href="kurs2.html">
+Zobacz kurs
+</a>
+
 </div>
 
-<div class="card">
-<h3>Bezpieczeństwo</h3>
-<p>
-Naucz się zasad bezpiecznej jazdy i jazdy na kole.
-</p>
 </div>
 
-</section>
-
-<!-- STOPKA -->
-
-<footer>
-
-© 2025 eScooter Academy
-
-</footer>
+</body>
+</html>
