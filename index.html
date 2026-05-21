@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Premium Scooter</title>
+<title>KuKirin</title>
 
 <style>
 
@@ -28,16 +28,17 @@ nav{
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:25px 60px;
-position:absolute;
+padding:25px 70px;
+background:#0a0a0a;
+position:sticky;
 top:0;
-width:100%;
 z-index:1000;
+border-bottom:1px solid #161616;
 }
 
 .logo{
 font-size:32px;
-font-weight:bold;
+font-weight:900;
 color:#a855f7;
 letter-spacing:2px;
 }
@@ -45,7 +46,7 @@ letter-spacing:2px;
 nav ul{
 display:flex;
 list-style:none;
-gap:30px;
+gap:35px;
 }
 
 nav ul li a{
@@ -62,14 +63,14 @@ color:#a855f7;
 /* HERO */
 
 .hero{
-height:100vh;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:80px;
+padding:60px 80px;
+min-height:90vh;
 }
 
-/* LEWA STRONA */
+/* LEWA */
 
 .left{
 width:50%;
@@ -77,9 +78,9 @@ width:50%;
 
 .left h1{
 font-size:85px;
-line-height:1.1;
-margin-bottom:25px;
+line-height:1.05;
 font-weight:900;
+margin-bottom:25px;
 }
 
 .purple{
@@ -88,7 +89,7 @@ color:#a855f7;
 
 .left p{
 font-size:24px;
-color:#cfcfcf;
+color:#bdbdbd;
 line-height:1.8;
 max-width:700px;
 }
@@ -96,15 +97,15 @@ max-width:700px;
 /* PRZYCISKI */
 
 .buttons{
-margin-top:50px;
+margin-top:45px;
 display:flex;
 gap:20px;
 flex-wrap:wrap;
 }
 
 .btn{
-padding:18px 40px;
-border-radius:15px;
+padding:18px 38px;
+border-radius:14px;
 text-decoration:none;
 font-size:20px;
 font-weight:bold;
@@ -122,16 +123,22 @@ color:white;
 }
 
 .btn:hover{
-transform:scale(1.05);
+transform:translateY(-4px);
 box-shadow:0 0 30px rgba(168,85,247,0.4);
 }
 
-/* PRAWA STRONA */
+/* PRAWA */
+
+.right{
+width:50%;
+display:flex;
+justify-content:center;
+}
 
 .right img{
-width:700px;
-max-width:100%;
-filter:drop-shadow(0 0 50px rgba(168,85,247,0.25));
+width:1000px;
+max-width:none;
+filter:drop-shadow(0 0 60px rgba(168,85,247,0.25));
 transition:0.3s;
 }
 
@@ -141,16 +148,21 @@ transform:scale(1.02);
 
 /* TELEFON */
 
-@media(max-width:1000px){
+@media(max-width:1100px){
 
 .hero{
 flex-direction:column;
 text-align:center;
-padding-top:140px;
+padding-top:120px;
 }
 
 .left{
 width:100%;
+}
+
+.right{
+width:100%;
+margin-top:40px;
 }
 
 .left h1{
@@ -166,13 +178,14 @@ justify-content:center;
 }
 
 .right img{
-margin-top:60px;
 width:100%;
+max-width:700px;
 }
 
 nav{
 flex-direction:column;
 gap:20px;
+padding:25px;
 }
 
 }
@@ -187,7 +200,7 @@ gap:20px;
 <nav>
 
 <div class="logo">
-PREMIUM
+KuKirin
 </div>
 
 <ul>
@@ -205,13 +218,14 @@ PREMIUM
 <div class="left">
 
 <h1>
-Premium <span class="purple">Scooter</span>
+Nowoczesne <span class="purple">kursy</span><br>
+hulajnóg
 </h1>
 
 <p>
-Nowoczesne kursy jazdy, bezpieczeństwa
-i obsługi hulajnóg elektrycznych
-w premium stylu.
+Poznaj bezpieczeństwo jazdy,
+technikę prowadzenia i obsługę
+hulajnóg elektrycznych.
 </p>
 
 <div class="buttons">
